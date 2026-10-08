@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Портфолио Артёма Терехова — студента СПбГУПТД" />
+<title>Артём Терехов — Портфолио</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="cursor-glow" aria-hidden="true"></div>
+
+<header class="header" id="header">
+  <nav class="nav container">
+    <a href="#hero" class="logo">
+      <span class="logo__mark">
+        <svg viewBox="0 0 40 40" width="36" height="36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#7c3aed"/>
+              <stop offset="100%" stop-color="#a78bfa"/>
+            </linearGradient>
+          </defs>
+          <rect width="40" height="40" rx="10" fill="url(#logoGrad)"/>
+          <path d="M11 29 L20 11 L29 29" stroke="#fff" stroke-width="2.6"
+                stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M15 23 H25" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+          <circle cx="32.5" cy="9" r="2" fill="#fff" opacity=".9"/>
+        </svg>
+      </span>
+      <span class="logo__text">artem.dev</span>
+    </a>
+
+    <ul class="nav__list" id="navList">
+      <li><a href="#about"     data-i18n="nav.about">Обо мне</a></li>
+      <li><a href="#skills"    data-i18n="nav.skills">Навыки</a></li>
+      <li><a href="#projects"  data-i18n="nav.projects">Проекты</a></li>
+      <li><a href="#education" data-i18n="nav.education">Образование</a></li>
+    </ul>
+
+    <div class="nav__actions">
+      <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Сменить тему">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+
+      <button class="lang-toggle" id="langToggle" aria-label="Сменить язык">
+        <span class="lang-toggle__item is-active" data-lang="ru">RU</span>
+        <span class="lang-toggle__item" data-lang="en">EN</span>
+      </button>
+
+      <button class="burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero" id="hero">
+    <div class="container hero__inner">
+
+      <div class="hero__top">
+        <div class="hero__label reveal">
+          <span class="hero__label-line"></span>
+          <span data-i18n="hero.label">Портфолио · СПбГУПТД</span>
+        </div>
+
+        <div class="hero__stats reveal">
+          <div class="stat">
+            <span class="stat__num">+11</span>
+            <span class="stat__label" data-i18n="hero.stat1">Технологий</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">4</span>
+            <span class="stat__label" data-i18n="hero.stat2">Года обучения</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__main">
+        <div class="hero__visual reveal">
+          <div class="hero__card">
+            <div class="hero__card-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="hero__card-inner">
+              <div class="code-line"><span class="c-p">const</span> <span class="c-y">student</span> = {</div>
+              <div class="code-line indent">name: <span class="c-g">'Артём'</span>,</div>
+              <div class="code-line indent">university: <span class="c-g">'СПбГУПТД'</span>,</div>
+              <div class="code-line indent">skills: [<span class="c-g">'HTML'</span>, <span class="c-g">'CSS'</span>, <span class="c-g">'JS'</span>],</div>
+              <div class="code-line indent">creative: <span class="c-b">true</span></div>
+              <div class="code-line">};</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__title-block">
+          <span class="hero__badge reveal">
+            <span class="dot"></span>
+            <span data-i18n="hero.badge">Ищу стажировку</span>
+          </span>
+
+          <h1 class="hero__title reveal">
+            <span data-i18n="hero.firstname">АРТЁМ</span>
+            <span data-i18n="hero.lastname">ТЕРЕХОВ</span>
+          </h1>
+
+          <p class="hero__role reveal">
+            <span class="hero__role-static" data-i18n="hero.roleStatic">Студент и</span>
+            <span id="typed"></span><span class="caret">|</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="hero__bottom">
+        <p class="hero__desc reveal" data-i18n="hero.desc">
+          Учусь в СПбГУПТД на направлении «ИТ-технологии и создание цифрового контента». Верстаю адаптивные сайты, работаю с анимациями и создаю визуальный контент.
+        </p>
+
+        <div class="hero__cta reveal">
+          <a href="#projects" class="btn btn--primary" data-i18n="hero.cta1">
+            Смотреть проекты
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+          <a href="#about" class="btn btn--ghost" data-i18n="hero.cta2">Обо мне</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__num">01</span>
+        <h2 data-i18n="about.title">Обо мне</h2>
+      </div>
+
+      <div class="about">
+        <div class="about__avatar reveal">
+          <div class="avatar">
+            <div class="avatar__inner">
+              <img src="photo.jpg" alt="Артём Терехов" />
+            </div>
+          </div>
+        </div>
+
+        <div class="about__text reveal">
+          <p data-i18n="about.p1">
+            Меня зовут Артём, я учусь в Санкт-Петербургском государственном университете промышленных технологий и дизайна (СПбГУПТД) на направлении «ИТ-технологии и создание цифрового контента».
+          </p>
+          <p data-i18n="about.p2">
+            Совмещаю техническую и творческую стороны: верстаю адаптивные сайты, работаю с анимациями, создаю визуальный контент. Люблю, когда интерфейс не только работает, но и вызывает эмоции.
+          </p>
+          <p data-i18n="about.p3">
+            Сейчас активно развиваюсь во frontend-разработке и ищу стажировку или проект, где смогу применить свои навыки. Вне учёбы — волейбол и видеоигры.
+          </p>
+
+          <ul class="about__facts">
+            <li>
+              <strong data-i18n="about.fact1.num">2025</strong>
+              <span data-i18n="about.fact1.label">Год поступления</span>
+            </li>
+            <li>
+              <strong data-i18n="about.fact2.num">2</strong>
+              <span data-i18n="about.fact2.label">Курс</span>
+            </li>
+            <li>
+              <strong data-i18n="about.fact3.num">11</strong>
+              <span data-i18n="about.fact3.label">Навыков в работе</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="skills">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__num">02</span>
+        <h2 data-i18n="skills.title">Навыки</h2>
+      </div>
+
+      <div class="skills">
+        <div class="skills__bars reveal" id="skillsBars"></div>
+
+        <div class="skills__tags reveal">
+          <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+          <span>Figma</span><span>Photoshop</span><span>Illustrator</span>
+          <span>Python</span><span>C++</span><span>Git</span>
+          <span>Premiere Pro</span><span>After Effects</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__num">03</span>
+        <h2 data-i18n="projects.title">Проекты</h2>
+      </div>
+
+      <div class="projects" id="projectsGrid"></div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="education">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__num">04</span>
+        <h2 data-i18n="edu.title">Образование</h2>
+      </div>
+
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="footer__logo">artem.dev</span>
+      <p data-i18n="footer.tagline">Портфолио студента СПбГУПТД</p>
+    </div>
+
+    <ul class="footer__contacts">
+      <li><a href="mailto:artem.terexov06@mail.ru">artem.terexov06@mail.ru</a></li>
+      <li><a href="https://t.me/Artemter007" target="_blank" rel="noopener">Telegram · @Artemter007</a></li>
+      <li><a href="tel:+79836977350">+7 983 697-73-50</a></li>
+    </ul>
+  </div>
+
+  <div class="container footer__bottom">
+    <span data-i18n="footer.rights">© 2025 Артём Терехов. Все права защищены.</span>
+    <span data-i18n="footer.made">Сделано с ❤️ в Санкт-Петербурге</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Наверх">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
